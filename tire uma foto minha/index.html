@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Câmera com Efeitos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>App de Câmera com Efeitos</h1>
+    </header>
+    <div class="camera">
+        <video id="video" autoplay></video>
+        <div class="controls">
+            <button id="captureButton">Capturar Foto</button>
+            <select id="effectSelect">
+                <option value="none">Nenhum efeito</option>
+                <option value="grayscale">Efeito Escala de Cinza</option>
+                <option value="sepia">Efeito Sépia</option>
+                <option value="invert">Efeito Inverter Cores</option>
+                <option value="brightness">Aumentar Brilho</option>
+                <option value="contrast">Aumentar Contraste</option>
+            </select>
+            <input type="range" id="brightnessRange" min="0" max="200" value="100">
+            <input type="range" id="contrastRange" min="0" max="200" value="100">
+        </div>
+    </div>
+    <div class="photo-container">
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="photo" src="" alt="Sua foto">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
